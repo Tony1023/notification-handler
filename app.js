@@ -12,10 +12,12 @@ app.use(bodyParser.urlencoded({
 app.post('/', (req, res) => {
   console.log(req.body);
   var message = credentials;
-  message.subject = 'New Comment';
-  message.text = 'Whatever the comment is';
-  // let send = require('gmail-send')(message);
-  res.status(200);
+  message.subject = 'New Comment from zhehao-lu.me';
+  message.text = req.body.text;
+  let send = require('gmail-send')(message, (err, res) => {
+    console.log(err, res);
+  });
+  res.status(200).send();
 });
 
 
