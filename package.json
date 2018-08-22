@@ -1,5 +1,6 @@
 {
   "dependencies": {
-    "googleapis": "27"
+    "express": "^4.16.3",
+    "gmail-send": "^1.2.14"
   }
 }
