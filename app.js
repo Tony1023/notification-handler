@@ -3,9 +3,14 @@
 const express = require('express');
 const app = express();
 const credentials = require('./credentials');
+const bodyParser = require('body-parser');
+
+app.use(bodyParser.urlencoded({
+  extended: true
+}));
 
 app.post('/', (req, res) => {
-  console.log('req');
+  console.log(req.body);
   var message = credentials;
   message.subject = 'New Comment';
   message.text = 'Whatever the comment is';
