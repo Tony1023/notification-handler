@@ -25,7 +25,7 @@ fs.readFile('credentials.json', (err, content) => {
   authorize(JSON.parse(content), listLabels);
 });
 
-const oAuth2Client;
+let oAuth2Client;
 /**
  * Create an OAuth2 client with the given credentials, and then execute the
  * given callback function.
