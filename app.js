@@ -86,19 +86,19 @@ function getNewToken(oAuth2Client) {
   });
 }
 
-async function sendEmail(message) {
+async function sendEmail(text) {
   // You can use UTF-8 encoding for the subject using the method below.
   // You can also just use a plain string if you don't need anything fancy.
   const subject = 'It\'s Lu';
   const utf8Subject = `=?utf-8?B?${Buffer.from(subject).toString('base64')}?=`;
   const messageParts = [
     'From: tony1023 <tony1023lv@gmail.com>',
-    'To: Yixuan Wang <wang042@usc.edu>',
+    'To: Zhehao Lu <zhehaolu@usc.edu>',
     'Content-Type: text/html; charset=utf-8',
     'MIME-Version: 1.0',
     `Subject: ${utf8Subject}`,
     '',
-    message
+    text
   ];
   const message = messageParts.join('\n');
 
