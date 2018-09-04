@@ -89,7 +89,7 @@ function getNewToken(oAuth2Client) {
 async function sendEmail(text) {
   // You can use UTF-8 encoding for the subject using the method below.
   // You can also just use a plain string if you don't need anything fancy.
-  const subject = 'It\'s Lu';
+  const subject = 'You have a new comment!';
   const utf8Subject = `=?utf-8?B?${Buffer.from(subject).toString('base64')}?=`;
   const messageParts = [
     'From: tony1023 <tony1023lv@gmail.com>',
