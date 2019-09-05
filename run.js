@@ -124,6 +124,7 @@ app.use(bodyParser.urlencoded({
 app.post('/', (req, res) => {
   console.log(req.body.text);
   sendEmail(req.body.text);
+  res.sendStatus(200);
 });
 
 app.listen(8002, 'localhost', () => {
